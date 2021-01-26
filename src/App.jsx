@@ -1,11 +1,14 @@
-import React from 'react'
-import  Nagivation from "./components/Navigation";
-const  App = ()=> {
+import React from "react";
+import Nagivation from "./components/Navigation";
+import { BrowserRouter as Router } from "react-router-dom";
+const App = () => {
   return (
     <>
-     <Nagivation/>
+      <Router>
+        <Nagivation />
+      </Router>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
