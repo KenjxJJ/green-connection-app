@@ -7,7 +7,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 
+*  Styles for the navigation
+*/
+.navbar-brand{
+  font-size: 1.7rem;
+}
+
+
+.btn-radius{
+ border-radius: 30px !important;
+}
+
+.menu li > a:focus{
+   border-bottom: 2px solid orangered ;
+   font-weight: bold;
+   color: rebeccapurple !important;
+   
+}
+
+
+.btn{
+  background-color:  #fff;
+  color: orangered;
+}
+.btn:hover,
+.btn:focus{
+  background-color: rgb(253, 89, 29);
+  color: #fff;
 }
