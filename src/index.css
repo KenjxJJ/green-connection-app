@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,29 +10,85 @@ body {
 /* 
 *  Styles for the navigation
 */
-.navbar-brand{
+.navbar-brand {
   font-size: 1.7rem;
 }
 
-
-.btn-radius{
- border-radius: 30px !important;
+.btn-radius {
+  border-radius: 30px !important;
 }
 
-.menu li > a:focus{
-   border-bottom: 2px solid orangered ;
-   font-weight: bold;
-   color: rebeccapurple !important;
-   
+.menu li > a:focus {
+  border-bottom: 2px solid orangered;
+  font-weight: bold;
+  color: rebeccapurple !important;
 }
 
-
-.btn{
-  background-color:  #fff;
+.btn {
+  background-color: #fff;
   color: orangered;
 }
 .btn:hover,
-.btn:focus{
+.btn:focus {
   background-color: rgb(253, 89, 29);
   color: #fff;
+}
+
+/* 
+* Home Page
+ */
+
+.landing-btn {
+  border: 1px solid orangered;
+  color: #fff;
+  background-color: orangered;
+}
+.landing-btn:hover,
+.landing-btn:active,
+.landing-btn:focus{
+  color: orangered !important;
+  border-color: orangered !important;
+  background-color: #fff !important;
+  box-shadow: unset;
+}
+
+img {
+  border: none;
+  outline: none;
+  z-index: -5;
+}
+
+@media all and  (min-width: 890px) {
+  body {
+    background: rgb(220, 222, 222);
+    background: -moz-linear-gradient(
+      86deg,
+      rgba(220, 222, 222, 1) 0%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 65%,
+      rgba(255, 255, 255, 1) 78%,
+      rgba(212, 152, 45, 0.418) 100%,
+      rgba(212, 152, 32, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      86deg,
+      rgba(220, 222, 222, 1) 0%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 65%,
+      rgba(255, 255, 255, 1) 78%,
+      rgba(212, 152, 45, 0.418) 100%,
+      rgba(212, 152, 32, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(220, 222, 222, 1) 0%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 65%,
+      rgba(255, 255, 255, 1) 78%,
+      rgba(212, 152, 45, 0.418) 100%,
+      rgba(212, 152, 32, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dcdede",endColorstr="#d49820",GradientType=1);
+    z-index: -3;
+  }
 }

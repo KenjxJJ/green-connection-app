@@ -46,7 +46,7 @@ const Navigation = () => {
             </NavItem>
             <NavItem>
               <NavLink href="#" className="">
-                <Button className="btn-light ml-sm-n2 shadow pt-1 pb-1 pl-4 pr-4 btn-radius btn-light">
+                <Button className="btn-light ml-sm-n2 shadow pt-1 pb-1 pl-4 pr-4 btn-radius">
                   Login
                 </Button>
               </NavLink>
