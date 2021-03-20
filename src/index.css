@@ -56,7 +56,9 @@ img {
   border: none;
   outline: none;
   z-index: -5;
+  width: 100%;
 }
+
 
 @media all and  (min-width: 890px) {
   body {
@@ -112,3 +114,17 @@ img {
     border-radius: inherit;
     transition: width .2s ease-in;
  }
+
+
+
+/* 
+* Product Page Details
+*/
+.img-product{
+  border-radius: 50%;
+  border: 3px solid #e6620a42;
+  width: 34vw;
+  width: 100%;
+  z-index: -5;
+  display: block;
+}

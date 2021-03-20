@@ -18,25 +18,22 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar light expand="md"  className="mr-4">
+      <Navbar light expand="md" className="mr-4">
         <NavbarBrand href="/" className="mr-4 font-weight-bold">
           <span style={{ color: "orangered" }}>Cargotrack</span>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-3 menu " navbar>
-            <NavItem >
-              <NavLink href="#">Product</NavLink>
-            </NavItem>
             <NavItem>
-              <NavLink href="#">Services</NavLink>
+              <NavLink href="/products">Products</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#">About Us</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="#">Prices</NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
           <Nav className="ml-3 ml-md-auto" navbar>
             <NavItem className="mt-1 font-weight-bold">
