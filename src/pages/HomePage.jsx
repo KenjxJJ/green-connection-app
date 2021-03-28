@@ -12,11 +12,10 @@ const HomePage = () => {
             Easy Cargo Delivery Tracker
           </h1>
           <p className="py-2">
-            Far away, behind the word mountains, far from countries, there live
-            the blind text, separated they line B
-          </p>
-            <Button href ="#" className="landing-btn  btn-radius font-weight-light ml-n3 py-3 px-2 px-md-4">
-              Free trial for 30 days!
+            Far away, behind the mountains,from countries, there live
+            a dedicated team to bring you whatever products you love at the doorsteps.        </p>
+            <Button href ="/login" className="landing-btn  btn-radius font-weight-light ml-n3 py-3 px-2 px-md-4">
+             Try us now!
             </Button>
         </section>
         <section className="col-lg-5 mr-n4">
