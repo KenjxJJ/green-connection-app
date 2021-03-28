@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import TraceProductPage from "./pages/TraceProductPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
+import AddNewProductPage from "./pages/AddNewProductPage"
+import CreateNewPackage from "./pages/CreateNewPackagePage"
 
 import ProductDetailsContextProvider from "./contexts/ProductDetailsContext";
 
@@ -17,6 +19,8 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/trace" component={TraceProductPage} />
+            <Route path="/create-package" component={CreateNewPackage} />
+            <Route path="/add-product" component={AddNewProductPage} />
             <Route path="/products" component={ProductsPage} />
             <Route path="/product/:id" component={ProductDetailsPage} />
           </Switch>
