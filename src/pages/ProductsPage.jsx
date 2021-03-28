@@ -2,13 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductDetailContext } from "../contexts/ProductDetailsContext";
 
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle
-} from "reactstrap";
+import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 const ProductsPage = () => {
   // Obtain all products
@@ -23,12 +17,11 @@ const ProductsPage = () => {
     <>
       {isDoneLoading ? (
         <section className="my-1">
-          <header className="bg-dark px-4 py-5 text-white">
+          <header className="all-products-section px-4 py-5 my-n1">
             <h3 className="my-3"> All products </h3>
             <p className="lead">
-              {" "}
               Here is the list of all items we can bring close to you! Select to
-              see the details and then order today.{" "}
+              see the details and then order today!
             </p>
           </header>
           <main className="px-3 d-md-flex justify-content-between">
@@ -77,8 +70,10 @@ const ProductsPage = () => {
         </section>
       ) : (
         <>
-          <section className="d-flex">
-            <p className="lead"> Loading...</p>
+         <section className="d-flex justify-content-center align-items-center w-50">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
           </section>
         </>
       )}
