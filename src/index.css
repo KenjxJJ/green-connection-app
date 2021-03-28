@@ -114,6 +114,14 @@ img {
 }
 
 /* 
+* Products Page
+*/
+header.all-products-section{
+  background-color: #ff4400b0;
+
+}
+
+/* 
 * Product Page Details
 */
 .img-product {
@@ -136,9 +144,21 @@ img {
 
 
 /* 
+* About Page
+*/
+.about-page{
+  background-color: #e2e2e2c4;
+}
+
+/* 
 *  Add New Product Page, 
 *  Create New Package
 */
+.other-link,
+.brand{
+ color: #ff4400fd !important;
+}
+
 .new-product-section{
    background-color: #e6620a54;
    color: rgb(65, 65, 65);

@@ -17,7 +17,7 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar light expand="md" className="mr-4">
+      <Navbar light expand="md" className="shadow mx-0">
         <NavbarBrand href="/" className="mr-4 font-weight-bold">
           <span style={{ color: "orangered" }}>Cargotrack</span>
         </NavbarBrand>
@@ -28,11 +28,8 @@ const Navigation = () => {
               <NavLink href="/products">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">About Us</NavLink>
+              <NavLink href="/about-us">About Us</NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink href="#">Prices</NavLink>
-            </NavItem> */}
           </Nav>
           <Nav className="ml-3 ml-md-auto" navbar>
             <NavItem>
