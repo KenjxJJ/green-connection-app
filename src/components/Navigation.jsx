@@ -30,6 +30,9 @@ const Navigation = () => {
             <NavItem>
               <NavLink href="/about-us">About Us</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/transactions">All Transactions</NavLink>
+            </NavItem>
           </Nav>
           <Nav className="ml-3 ml-md-auto" navbar>
             <NavItem>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import TransactionsPage  from "./pages/TransactionsPage";
 import TraceProductPage from "./pages/TraceProductPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path="/" component={HomePage} />
             <Route path="/trace" component={TraceProductPage} />
             <Route path="/about-us" component={AboutUsPage} />
+            <Route path="/transactions" component={TransactionsPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/create-package" component={CreateNewPackage} />
             <Route path="/add-product" component={AddNewProductPage} />
