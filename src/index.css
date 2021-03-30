@@ -146,6 +146,14 @@ header.all-products-section {
 */
 .about-page {
   background-color: #e2e2e2c4;
+  text-align: justify;
+}
+
+/* 
+* Transactions Page
+*/
+.transaction-header{
+  background-color: #e6620a42;
 }
 
 /* 
