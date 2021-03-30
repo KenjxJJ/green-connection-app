@@ -1,19 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductDetailContext } from "../contexts/ProductDetailsContext";
 import { Link } from "react-router-dom";
 const CreateNewPackagePage = () => {
   const { productsInfo } = useContext(ProductDetailContext);
 
+  const [newPackage, setNewPackage] = useState({});
+
+  //  Check input values
+  const handleChange = (e) => {
+    const target = e.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+    setNewPackage({ ...newPackage, [name]: value });
+  };
+
+  // Submit a new product
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(newPackage);
+  };
+
   return (
     <>
       <section className="">
         <div className="bg-secondary mx-n3 py-4 px-5 text-white">
-        <header className="w-100">
-          <h3> Create New Package </h3>
-          <p className="mt-3"> Add new package for a specific product, that you will choose from the list of products in our database.
-          </p>
-          <p>Add a new <Link className="other-link" to={'/add-product'}>product</Link> instead!</p>
-        </header>
+          <header className="w-100">
+            <h3> Create New Package </h3>
+            <p className="mt-3">
+              {" "}
+              Add new package for a specific product, that you will choose from
+              the list of products in our database.
+            </p>
+            <p>
+              Add a new{" "}
+              <Link className="other-link" to={"/add-product"}>
+                product
+              </Link>{" "}
+              instead!
+            </p>
+          </header>
         </div>
         <main>
           <section className="p-4 d-flex justify-content-center">
@@ -21,20 +46,21 @@ const CreateNewPackagePage = () => {
               <form
                 className="form"
                 method="POST"
-                enctype="multipart/form-data"
-                action="{onSubmit()}"
+                encType="multipart/form-data"
+                onSubmit={handleSubmit}
               >
                 <legend className="pb-3 mb-0 readonly">
-                  <h4>New Product </h4>
+                  <h4>New Package </h4>
                 </legend>
-                <label for="product">Product</label>
+                <label htmlFor="product">Product</label>
                 <select
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="item-number"
-                  placeholder="B123456723"
+                  name="product"
+                  onChange={handleChange}
                 >
-                  <option selected value="base">
+                  <option defaultValue={"Please Select"} value="base">
                     Please Select
                   </option>
                   {productsInfo.map((product) => (
@@ -43,55 +69,88 @@ const CreateNewPackagePage = () => {
                     </option>
                   ))}
                 </select>
-                <label for="product-bill-ref">Bill Reference</label>
+                <label htmlFor="product-bill-ref">Bill Reference</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="product-bill-ref"
-                  maxlength="200"
+                  maxLength="200"
+                  name="bill_reference"
                   placeholder="W345612525"
+                  onChange={handleChange}
                 />{" "}
-                <label for="package-size">Size</label>
+                <label htmlFor="product-inv-ref">Invoice Reference</label>
                 <input
-                  class="form-control"
+                  type="text"
+                  className="form-control"
+                  id="product-inv-ref"
+                  maxLength="200"
+                  name="invoice_reference"
+                  placeholder="W345612525"
+                  onChange={handleChange}
+                />{" "}
+                <label htmlFor="package-size">Size</label>
+                <input
+                  className="form-control"
                   id="package-size"
+                  name="size"
                   minLength="0"
                   placeholder="100, 200 or Size A..."
+                  onChange={handleChange}
                 />{" "}
-                <label for="package-weight">Weight</label>
+                <label htmlFor="package-weight">Weight</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="package-weight"
-                  maxlength="200"
+                  maxLength="200"
+                  name="weight"
                   placeholder="kilograms, ounces..."
+                  onChange={handleChange}
                 />{" "}
-                <label for="package-origin">Country of Origin</label>
+                <label htmlFor="package-origin">Country of Origin</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="package-origin"
-                  maxlength="200"
+                  name="country_of_origin"
+                  maxLength="200"
                   placeholder="Uganda"
+                  onChange={handleChange}
                 />{" "}
-                <input className="ml-2" type="checkbox" id="package-safety" />
-                <label for="package-safety">Dangerous Good</label>
-                <label className="d-block mt-2" for="date-of-arrival">
+                <input
+                  className="ml-2"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="is_a_dangerous_good"
+                  id="package-safety"
+                />
+                <label htmlFor="package-safety">Dangerous Good</label>
+                <label className="d-block mt-2" htmlFor="date-of-arrival">
                   Date of Arrival
                 </label>
                 <input
                   type="datetime-local"
-                  class="form-control"
+                  className="form-control"
                   id="date-of-arrival"
+                  name="date_of_arrival"
+                  onChange={handleChange}
                 />
                 <input
                   className="ml-2"
                   type="checkbox"
                   id="package-delivered"
                   placeholder=""
+                  name="is_recieved"
+                  onChange={handleChange}
                 />
-                <label for="package-delivered">Recieved</label>
-              <button  type="submit" className="mx-1 mt-3 d-block btn btn-submit-package">Submit</button>
+                <label htmlFor="package-delivered">Recieved</label>
+                <button
+                  type="submit"
+                  className="mx-1 mt-3 d-block btn btn-submit-package"
+                >
+                  Submit
+                </button>
               </form>
             </main>
           </section>
