@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Orders = () => {
   const [ordersMade, setOrderMade] = useState(null);
-
+  
+  useEffect(() => {  
+    setOrderMade(null)
+  }, [])
   return (
     <>
       <section className="py-2 border-bottom">

@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 
 const Receipts = () => {
+  const [receiptsPaid, setReceiptsPaid] = useState(null);
 
-    const [receiptsPaid, setReceiptsPaid] = useState(null)
+  useEffect(() => {
+    setReceiptsPaid(null);
+  }, []);
 
   return (
     <>
